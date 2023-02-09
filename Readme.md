@@ -24,3 +24,6 @@ if (buttonState == HIGH)
   Serial.println("Waiting");
     }
 }
+
+
+This code reads the button imput by detecting weather or not there is power going through the complete circut
