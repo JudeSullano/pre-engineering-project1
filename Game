@@ -1,0 +1,92 @@
+int ledPin = 2;
+int buttonPin = 12 ;
+int buttonState = 0;
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+}
+
+void loop() {
+
+  if (!digitalRead(buttonPin))
+  {
+    if (ledPin == 2) {
+      pinMode (ledPin, OUTPUT);
+      digitalWrite(ledPin, HIGH);
+      for (int i = 0; i < 500; i = i + 1) {
+        delay(1);
+        if (digitalRead(buttonPin)) {
+          digitalWrite(ledPin, LOW);
+          i = 2000;
+          ledPin = 1;
+        }
+      }
+      digitalWrite(ledPin, LOW);
+      for (int i = 0; i < 250; i = i + 1) {
+        delay(1);
+        if (digitalRead(buttonPin)) {
+          digitalWrite(ledPin, LOW);
+          i = 2000;
+          ledPin = 1;
+        }
+      }
+      ledPin = ledPin + 1;
+    }
+    if (ledPin == 3) {
+      pinMode (ledPin, OUTPUT);
+      digitalWrite(ledPin, HIGH);
+      for (int i = 0; i < 500; i = i + 1) {
+        delay(1);
+        if (digitalRead(buttonPin)) {
+          digitalWrite(ledPin, LOW);
+          i = 2000;
+          ledPin = 1;
+        }
+      }
+      digitalWrite(ledPin, LOW);
+      for (int i = 0; i < 250; i = i + 1) {
+        delay(1);
+        if (digitalRead(buttonPin)) {
+          digitalWrite(ledPin, LOW);
+          i = 2000;
+          ledPin = 1;
+        }
+      }
+      ledPin = ledPin + 1;
+    }
+    if (ledPin == 4) {
+      pinMode (ledPin, OUTPUT);
+      digitalWrite(ledPin, HIGH);
+      for (int i = 0; i < 500; i = i + 1) {
+        delay(1);
+        if (digitalRead(buttonPin)) {
+          digitalWrite(ledPin, LOW);
+          i = 2000;
+          ledPin = 1;
+        }
+      }
+      digitalWrite(ledPin, LOW);
+      for (int i = 0; i < 250; i = i + 1) {
+        delay(1);
+        if (digitalRead(buttonPin)) {
+          digitalWrite(ledPin, LOW);
+          ledPin = 1;
+          break;
+        }
+      }
+      ledPin = ledPin + 1;
+    }
+    if (ledPin == 5) {
+      pinMode(ledPin, OUTPUT);
+      digitalWrite(ledPin, HIGH);
+      while (!digitalRead(buttonPin)) {
+        delay(100);
+        Serial.println("hi");
+      }
+      digitalWrite(ledPin, LOW);
+      ledPin = 2;
+    }
+  }
+}
+
+What this does is that the led pins will go from 2 -> 5 untill the button is pressed, when the button is pressed it will reset the led pin to pin 2
