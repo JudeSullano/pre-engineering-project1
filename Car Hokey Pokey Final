@@ -328,5 +328,8 @@ void drive(double leftPow, double rightPow) {
   analogWrite(Speed_Right, (int) (rightPow * 255));
 }
 
-The code here tells the car to put it's right "foot" in and shake it all about, not to much other than stating the varriables 
-and having void drive work with void loop
+The code here tells the car to put it's right "foot" in and shake it all about, the purpose of this is to have our car 
+do the Hokey Pokey because we thought it would be pretty funny.
+
+The next steps would probably be to add a buzzer that plays the music with the dancing, the only hard part would be 
+timing the bot to the music.
