@@ -328,6 +328,8 @@ void drive(double leftPow, double rightPow) {
   analogWrite(Speed_Right, (int) (rightPow * 255));
 }
 
+983DE315-3C6D-4F22-8A44-FBB641DE9BB1.jpeg
+
 The code here tells the car to put it's right "foot" in and shake it all about, the purpose of this is to have our car 
 do the Hokey Pokey because we thought it would be pretty funny.
 
